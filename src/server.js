@@ -8,7 +8,7 @@ const path = require('path');
 
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: 'https://tec24h-frontend.herokuapp.com' }));
 app.use(express.json());
 app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
 
