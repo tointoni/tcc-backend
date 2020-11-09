@@ -1,0 +1,15 @@
+user: user_id
+
+user e o nome da variavel que esta configurado no banco
+user_id e o nome da variavel que vem do frontend no corpo da requisiçao
+
+
+requisiçao para mandar para o banco
+const spot = await Spot.create ({
+    user:user_id,
+    thumbnail: filename,
+    company,
+    techs,
+    price,
+    //quando o nome da varial da requisiçao for a mesma do banco, nao precisa por no ato da criaçao
+})
