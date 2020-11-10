@@ -20,7 +20,7 @@ loge preencha o formulário, você deverá ver tudo no campo de formulário dent
 // driver: utiliza as querys do banco tipo select* FROM ...
 // query builder: linguagem de manipulação do banco em JS traduzido para query sql
 
-mongoose.connect( process.env.MONGO_URL, {
+mongoose.connect( "mongodb+srv://tcc:tcc123@omnistack-r3ccf.mongodb.net/tcc?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
