@@ -1,28 +1,61 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add express
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add corsgit
 
 PATH: 
-  C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\ProgramData\chocolatey\bin;C:\Program Files\apache-maven-3.6.2\bin;C:\Program Files\Java\jdk-13.0.1\bin;C:\Ruby26-x64\bin;C:\Users\gil\AppData\Roaming\npm;C:\Users\gil\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\gil\AppData\Local\Yarn\bin;C:\Program Files\Java\jdk-13.0.1\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2019.3\bin;
+  C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Users\Antonio\AppData\Local\Microsoft\WindowsApps;;C:\Users\Antonio\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Antonio\AppData\Roaming\npm;C:\Users\Antonio\AppData\Local\Yarn\bin
 
 Yarn version: 
-  1.17.3
+  1.22.5
 
 Node version: 
-  10.16.3
+  14.15.0
 
 Platform: 
   win32 x64
 
 Trace: 
-  Error: connect ECONNREFUSED 192.168.0.1:443
-      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
+  Error: https://registry.yarnpkg.com/corsgit: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66097:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140749:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141721:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141643:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (_stream_readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
 
 npm manifest: 
   {
     "name": "backend",
     "version": "1.0.0",
     "main": "index.js",
-    "license": "MIT"
+    "license": "MIT",
+    "scripts": {
+      "dev": "nodemon src/server.js",
+      "start": "node src/server.js"
+    },
+    "dependencies": {
+      "bcrypt": "^4.0.1",
+      "body-parser": "^1.19.0",
+      "cors": "^2.8.5",
+      "expres": "0.0.5",
+      "express": "^4.17.1",
+      "fs": "^0.0.1-security",
+      "handlebar": "^1.0.0",
+      "jsonwebtoken": "^8.5.1",
+      "mongoose": "^5.10.13",
+      "multer": "^1.4.2",
+      "nodemailer": "^6.4.15",
+      "nodemailer-express-handlebars": "^4.0.0",
+      "path": "^0.12.7",
+      "sharp": "^0.25.1",
+      "tls": "0.0.1"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.6"
+    }
   }
 
 yarn manifest: 

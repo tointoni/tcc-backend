@@ -35,4 +35,4 @@ mongoose.connect( "mongodb+srv://tcc:tcc123@omnistack-r3ccf.mongodb.net/tcc?retr
 
 app.use(routes);
 
-app.listen(4444);
+app.listen(process.env.PORT || 4444);
