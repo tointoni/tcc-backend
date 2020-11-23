@@ -102,10 +102,15 @@ module.exports = {
         const { tokenCode } = req.body
         const { newPassword } = req.body
         const { password } = req.body
+
+        var numb1 = Number(tokenCode);
+        var numb2 = Number(newPassword);
+        var numb3 = Number(password);
+        console.log(email, numb1, numb2,numb3)
         try {
             const user = await client.findOne({ email: email}).select('+password');
-            if ((tokenCode === user.tokenCode) && (newPassword === password)){
-                user.password = password;
+            if ((numb1 === user.tokenCode) && (numb2 === numb3)){
+                user.password = numb3;
                 await user.save();
                 console.log(user)
                 await Client.findByIdAndUpdate({ _id: user._id}, { tokenCode: null }, {new: true});
@@ -114,6 +119,7 @@ module.exports = {
                 return res.json("Token ou senha errada, tente novamente!!!")
             }
         } catch {
+            console.log(err)
             return res.json("Erro tente novamente!!!")
         }
     },
@@ -123,10 +129,15 @@ module.exports = {
         const { tokenCode } = req.body
         const { newPassword } = req.body
         const { password } = req.body
+        var numb1 = Number(tokenCode);
+        var numb2 = Number(newPassword);
+        var numb3 = Number(password);
+        console.log(email, numb1, numb2,numb3)
+
         try {
             const user = await Company.findOne({ email: email}).select('+password');
-            if ((tokenCode === user.tokenCode) && (newPassword === password)){
-                user.password = password;
+            if ((numb1 === user.tokenCode) && (numb2 === numb3)){
+                user.password = numb3;
                 await user.save();
                 console.log(user)
                 await Company.findByIdAndUpdate({ _id: user._id}, { tokenCode: null }, {new: true});
