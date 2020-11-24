@@ -118,6 +118,7 @@ module.exports = {
     //rota para gerar o stts da solicitação se esta em fechada
     async storecloseServices (req, res) {
         const { id } = req.params;
+        console.log(id);
         const response = await findByIdAndUpdate({ _id: id }, { status : "FECHADA"}, { new: true } );
         return res.json(response);
     },
